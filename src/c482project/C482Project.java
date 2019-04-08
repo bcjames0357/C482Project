@@ -5,10 +5,12 @@
  */
 package c482project;
 
+import java.io.IOException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 /**
@@ -19,14 +21,15 @@ public class C482Project extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
-        
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(C482Project.class.getResource("MainScreen.fxml"));
+        Parent root = loader.load();
         Scene scene = new Scene(root);
-        
         stage.setScene(scene);
         stage.show();
     }
-
+    
+   
     /**
      * @param args the command line arguments
      */
