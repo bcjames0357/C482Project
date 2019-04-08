@@ -260,90 +260,9 @@ public class MainScreenController implements Initializable {
         this.deletePartButton.setDisable(true);
         productTableView.setItems(Inventory.getProducts());
         partsTableView.setItems(Inventory.getParts());
-        
-        //partsTableView.setItems(setPartData());
-        //productTableView.setItems(setProductData());
-        
     }
     
-    public ObservableList<Part> setPartData()
-    {
-        // Dummy data for testing
-        ObservableList<Part> parts = FXCollections.observableArrayList();
-        
-        InHouse part1 = new InHouse();
-        part1.setPartID(1);
-        part1.setName("Part 1");
-        part1.setPrice(100.00);
-        part1.setInStock(1202);
-        part1.setMin(5);
-        part1.setMax(1225);
-        part1.setMachineID(111);
     
-        InHouse part2 = new InHouse();
-        part2.setPartID(2);
-        part2.setName("Part 2");
-        part2.setPrice(100.00);
-        part2.setInStock(10);
-        part2.setMin(5);
-        part2.setMax(15);
-        part2.setMachineID(111);
-
-        Outsourced part3 = new Outsourced();
-        part3.setPartID(3);
-        part3.setName("Part 3");
-        part3.setPrice(100.00);
-        part3.setInStock(120);
-        part3.setMin(52);
-        part3.setMax(152);
-        part3.setCompanyName("Company 3");
-
-
-        Outsourced part4 = new Outsourced();
-        part4.setPartID(4);
-        part4.setName("Part 4");
-        part4.setPrice(100.00);
-        part4.setInStock(120);
-        part4.setMin(52);
-        part4.setMax(125);
-        part4.setCompanyName("Company 4");
-    
-        parts.add(part1);
-        parts.add(part2);
-        parts.add(part3);
-        parts.add(part4);
-        
-        return parts;
-    }
-    
-    public ObservableList<Product> setProductData()
-    {
-        ObservableList<Product> product = FXCollections.observableArrayList();
-        
-        Product prod1 = new Product();
-        prod1.setProductID(1);
-        prod1.setName("Prod 1");
-        prod1.setInStock(5);
-        prod1.setMin(2);
-        prod1.setMax(8);
-        prod1.setPrice(1011.10);
-        
-        Product prod2 = new Product();
-        prod2.setProductID(2);
-        prod2.setName("Prod 2");
-        prod2.setInStock(7);
-        prod2.setMin(1);
-        prod2.setMax(11);
-        prod2.setPrice(1222.10);
-
-        
-        product.add(prod1);
-        product.add(prod2);
-        
-        
-        return product;
-    }
-
     void setMainApp(C482Project aThis) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
